@@ -10,3 +10,5 @@ Zsh: (place in ~/)
   - z.sh
 
 In Vim, you do a vertical split with :vsp and horizontal split with :sp. I aliased these commands in .zshrc so that it does exactly the same thing while at tmux. You don't get to remember extra that way.
+
+I also set .zshrc so that you are automatically inside tmux when you open a new terminal or ssh'd into the machine.
