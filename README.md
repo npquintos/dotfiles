@@ -12,7 +12,7 @@ Vim: (place in ~/.vim/plugin)
   - fugitive.vim --> needs git installation. This plugin is optional
   - vimwiki.vim --> This is not necessary but I like this tool
   
-NerdTree is popular but I find myself just doing ":e ." most of the time and are sufficient for my needs. If I need to edit a particular file, ":find -R filepattern", followed by selection, is also good enough for me.
+NerdTree is popular but I find myself just doing ":e ." most of the time and are sufficient for my needs. If I need to edit a particular file, ":find filenamepattern", followed by selection via TAB, is also good enough for me.
 
 Zsh: (place in ~/)
   - z.sh
