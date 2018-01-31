@@ -20,13 +20,28 @@ Zsh: (place in ~/)
 I  set .zshrc so that you are automatically inside tmux when you open a new terminal and it attaches itself automatically from the last tmux session.
 
 Modified Tmux commands:
-:vsp - to split tmux panel vertically, similar to your command inside vim
-:sp  - to split tmux panel horizontally, similar to vim command
-C-h  - go to left panel - similar behavior while inside vim
-C-j  - go to panel below - similar behavior while inside vim
-C-k  - go to panel above - similar behavior while inside vim
-C-l  - go to panel to the right - similar behavior while inside vim
-C-\[p - go to previous tmux window
-ESC-p - to to previous tmux window
-:ls  - list tmux sessions
+
+ - **:vsp**/**:sp**  (take note of the : prefix) will create vertical/horizontal splits within vim if you are inside vim and in the window if you are outside vim
+
+ -  **Ctrl-h**/**j**/**k**/**l**  will seamlessly move you between panes, and vim splits
+
+ -  **Alt-h**/**j**/**k**/**l**  will increase/decrease pane size based on direction
+
+ -  **exit** will destroy that pane.
+
+ -  **Esc p** (or **Ctrl-\[ p**) will place you to the previous window if there is one
+
+ -  **Alt-p**/**n** will place you to the previous/next window if there is one
+
+ -  **Ctrl-b c** will create a new window (and prompt you for a window name)
+
+ -  **Ctrl-b d** will detach you from that window session (but saves that session so that you could go back in). Or, you could just close the window via x at the upper right corner.
+
+ -  **:lsw** lists all windows in this current session
+
+ -  **:lss** lists all session
+
+ -  **:win \<window name or :index\>** jumps to that named window or index. **Window name** could be partial for as long as it is unique; tmux will try to find a match.
+  
+
 
