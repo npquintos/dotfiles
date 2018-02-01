@@ -15,15 +15,15 @@ Vim: (place in ~/.vim/plugin)
 NerdTree is popular but I find myself just doing ":e ." most of the time and are sufficient for my needs. If I need to edit a particular file, ":find filenamepattern", followed by selection via TAB, is also good enough for me.
 
 Zsh: (place in ~/)
-  - [z.sh](https://github.com/rupa/z)
+  - [z.sh](https://github.com/rupa/z) - remembers previously visited directories and allows you to go there without typing the complete path.
 
-I  set .zshrc so that you are automatically inside tmux when you open a new terminal and it attaches itself automatically from the last tmux session.
+I  set .zshrc so that you are automatically inside tmux when you open a new terminal and it attaches itself automatically from the last tmux session. The automatically created tmux session is <username>_session. If your username is john, the session name would be john_session. If such session already exists, it will re-attach to it. If that session does not exist, it will create a new one with that name.
 
 Modified Tmux commands:
 
  - **:vsp**/**:sp**  (take note of the : prefix) will create vertical/horizontal splits within vim if you are inside vim and in the window if you are outside vim
 
- -  **Ctrl-h**/**j**/**k**/**l**  will seamlessly move you between panes, and vim splits
+-  **Ctrl-h**/**j**/**k**/**l**  will seamlessly move you between panes, and vim splits. You need not worry whether you are inside or outside of vim; behavior is consistent.
 
  -  **Alt-h**/**j**/**k**/**l**  will increase/decrease pane size based on direction
 
