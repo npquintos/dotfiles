@@ -203,10 +203,10 @@ imap <leader>ha <ESC>80a#<ESC>a
 map <Leader>dt :r !date /t<CR>
 imap <C-e> <ESC><C-e>
 imap <leader>ha <ESC>80a#<ESC>a
-map <Esc>n :bnext<CR>
-imap <M-n> <ESC><M-n>
+map <C-w> :bnext<CR>
+imap <C-w> <ESC><C-w>
 map <C-p> :!python %<CR>
-imap <C-p> <ESC><A-p>
+imap <C-p> <ESC><C-p>
 set undofile
 set colorcolumn=85
 vnoremap > >gv
