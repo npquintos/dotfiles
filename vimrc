@@ -206,13 +206,13 @@ imap <leader>ha <ESC>80a#<ESC>a
 map <C-w> :bnext<CR>
 imap <C-w> <ESC><C-w>
 map <C-p> :!python %<CR>
-imap <C-p> <ESC><C-p>
+imap <C-p> <ESC><A-p>
 set undofile
 set colorcolumn=85
 vnoremap > >gv
 vnoremap < <gv
-map <C-i> 10<C-w>>
-map <C-d> 10<C-w><
+map <C-i> :vertical resize +5<cr>
+map <C-d> :vertical resize -5<cr>
 map T zt
 inoremap <C-l> <ESC>lldehhp
 noremap U ebgUe
