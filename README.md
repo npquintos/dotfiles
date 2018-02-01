@@ -1,5 +1,5 @@
 # dotfiles
-These are my configuration files for zsh, vim, and tmux. They are integrated together to form a unified tool. My aims are as follows:
+These are my configuration files for zsh, vim, and tmux. Simply rename them with a dot '.' in front and save them in your home directory.They are integrated together to form a unified tool. My aims are as follows:
 - less plugins as possible to enhance speed
 - less memorization of keystrokes by using the same keystrokes while inside vim or at tmux.
 - Frequently used keys must be keys that are easy to type
@@ -7,15 +7,15 @@ These are my configuration files for zsh, vim, and tmux. They are integrated tog
 The following plugins are necessary for these configuration files to work properly.
 
 Vim: (place in ~/.vim/plugin)
-  - auto-pairs.vim
-  - tmux_navigator.vim
-  - fugitive.vim --> needs git installation. This plugin is optional
-  - vimwiki.vim --> This is not necessary but I like this tool
+  - [auto-pairs.vim](https://github.com/jiangmiao/auto-pairs)
+  - [tmux_navigator.vim](https://github.com/christoomey/vim-tmux-navigator)
+  - [fugitive.vim](https://github.com/tpope/vim-fugitive) --> needs git installation. This plugin is optional
+  - [vimwiki.vim](https://github.com/vimwiki/vimwiki) --> This is not necessary but I like this tool
   
 NerdTree is popular but I find myself just doing ":e ." most of the time and are sufficient for my needs. If I need to edit a particular file, ":find filenamepattern", followed by selection via TAB, is also good enough for me.
 
 Zsh: (place in ~/)
-  - z.sh
+  - [z.sh](https://github.com/rupa/z)
 
 I  set .zshrc so that you are automatically inside tmux when you open a new terminal and it attaches itself automatically from the last tmux session.
 
