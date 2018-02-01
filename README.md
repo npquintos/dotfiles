@@ -17,11 +17,12 @@ NerdTree is popular but I find myself just doing ":e ." most of the time and are
 Zsh: (place in ~/)
   - [z.sh](https://github.com/rupa/z) - remembers previously visited directories and allows you to go there without typing the complete path.
 
-I  set .zshrc so that you are automatically inside tmux when you open a new terminal and it attaches itself automatically from the last tmux session. The automatically created tmux session is <username>_session. If your username is john, the session name would be john_session. If such session already exists, it will re-attach to it. If that session does not exist, it will create a new one with that name.
+I  set .zshrc so that you are automatically inside tmux when you open a new terminal and it attaches itself automatically from the last tmux session. The automatically created tmux session is \<username\>_session. If your username is **john**, the session name would be **john_session**. If such session already exists, it will re-attach to it. If that session does not exist, it will create a new one with that name.
 
-Modified Tmux commands:
+## Modified Tmux commands:
+The default leader, C-b was left unchanged and all regular command should still work
 
- - **:vsp**/**:sp**  (take note of the : prefix) will create vertical/horizontal splits within vim if you are inside vim and in the window if you are outside vim
+ - **:vsp**/**:sp**  (take note of the **:** prefix) will create vertical/horizontal splits within vim if you are inside vim and in the window if you are outside vim
 
 -  **Ctrl-h**/**j**/**k**/**l**  will seamlessly move you between panes, and vim splits. You need not worry whether you are inside or outside of vim; behavior is consistent.
 
@@ -35,13 +36,13 @@ Modified Tmux commands:
 
  -  **Ctrl-b c** will create a new window (and prompt you for a window name)
 
- -  **Ctrl-b d** will detach you from that window session (but saves that session so that you could go back in). Or, you could just close the window via x at the upper right corner.
+ -  **Ctrl-b d** will detach you from that window session (but saves that session so that you could go back in). Or, you could just close the window via **x** at the upper right window corner.
 
  -  **:lsw** lists all windows in this current session
 
  -  **:lss** lists all session
 
- -  **:win \<window name or :index\>** jumps to that named window or index. **Window name** could be partial for as long as it is unique; tmux will try to find a match.
+ -  **:win \<window name or :index\>** jumps to that named window or index. **Window name** could be partial for as long as it is unique; tmux will try to find a match. For example, if you have a window name (within that tmux session) called **programming**, you could type **:win prog** \<Enter\> and it should place you to that window.
   
 
 
