@@ -57,7 +57,7 @@ The default leader, C-b was left unchanged and all regular command should still 
  
  - **\<leader\>dt** will insert date at current location
   
- - **\<leader\>'** will try to place the word under the cursor inside '  '
+ - **\<leader\>'** will try to place the word under the cursor inside '  '. Will also work with {(\[" by preceeding them with \<leader\>
   
  - **\<leader\>m** will remove the **^M** characters from files coming from MSDOS.
   
@@ -76,16 +76,6 @@ The default leader, C-b was left unchanged and all regular command should still 
  - **C-d** will decrease the column width of the pane
  
  - **T** will place the current line to the top of the display
- 
- - **C-l** will place the next word inside the parentesis. will work only while on insert mode. For example, say you have this statement.
- 
-      **if age**
-      
-   then, you realized that you need to place **age** inside parentesis. So, you go to begining of **age**, insert **(** then type **C-l**. The result would be
-   
-      **if (age)**
-      
-    you will still be in the insert mode and the cursor is at the end of word **age**.
   
   - **U** will change the word under the cursor to **U**ppercase
   
