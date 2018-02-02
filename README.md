@@ -55,7 +55,11 @@ The default leader, C-b was left unchanged and all regular command should still 
  
  -  **:q** kill pane where you are at
  
- -  **:q!** kill window where you are at. It will ask for confirmation
+ -  **:qw** kill window where you are at. It will ask for confirmation
+ 
+ -  **:qt** detach the session where you are at.
+  
+ -  **:qs** detach the session where you are at. This is the same as **:qt**
 
  -  **:win \<window name or :index\>** jumps to that named window or index. **Window name** could be partial for as long as it is unique; tmux will try to find a match. For example, if you have a window name (within that tmux session) called **programming**, you could type **:win prog** \<Enter\> and it should place you to that window.
 
