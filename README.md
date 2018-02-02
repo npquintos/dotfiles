@@ -19,24 +19,28 @@ Zsh: (place in ~/)
 
 I  set .zshrc so that you are automatically inside tmux when you open a new terminal and it attaches itself automatically from the last tmux session. The automatically created tmux session is \<username\>_session. If your username is **john**, the session name would be **john_session**. If such session already exists, it will re-attach to it. If that session does not exist, it will create a new one with that name.
 
-## Modified Tmux commands:
-The default leader, C-b was left unchanged and all regular command should still work
-
+## Regular Tmux commands:
+The default leader, C-b was left unchanged and all regular command should still work:
+ -  **Ctrl-b c** will create a new window (and prompt you for a window name)
+ 
+ -  **Ctrl-b d** will detach you from that window session (but saves that session so that you could go back in). Or, you could just close the window via **x** at the upper right window corner
+ 
+  -  **Ctrl-b $** will change the session name
+  
+  -  **Ctrl-b ,** will change the window name
+  
+  -  **exit** will destroy that pane.
+  
+## Customized Tmux commands:
  - **:vsp**/**:sp**  (take note of the **:** prefix) will create vertical/horizontal splits within vim if you are inside vim and in the window if you are outside vim
 
 -  **Ctrl-h**/**j**/**k**/**l**  will seamlessly move you between panes, and vim splits. You need not worry whether you are inside or outside of vim; behavior is consistent.
 
  -  **Alt-h**/**j**/**k**/**l**  will increase/decrease pane size based on direction
 
- -  **exit** will destroy that pane.
-
  -  **Esc p** (or **Ctrl-\[ p**) will place you to the previous window if there is one
 
  -  **Alt-p**/**n** will place you to the previous/next window if there is one
-
- -  **Ctrl-b c** will create a new window (and prompt you for a window name)
-
- -  **Ctrl-b d** will detach you from that window session (but saves that session so that you could go back in). Or, you could just close the window via **x** at the upper right window corner.
 
  -  **:lsw** lists all windows in this current session
 
