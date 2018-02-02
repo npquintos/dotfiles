@@ -19,7 +19,7 @@ Zsh: (place in ~/)
 
 I  set .zshrc so that you are automatically inside tmux when you open a new terminal and it attaches itself automatically from the last tmux session. The automatically created tmux session is \<username\>_session. If your username is **john**, the session name would be **john_session**. If such session already exists, it will re-attach to it. If that session does not exist, it will create a new one with that name.
 
-## Regular Tmux commands:
+## Regular Tmux key bindings:
 The default leader, C-b was left unchanged and all regular command should still work:
  -  **Ctrl-b c** will **c**reate a new window (and prompt you for a window name)
  
@@ -31,7 +31,7 @@ The default leader, C-b was left unchanged and all regular command should still 
   
   -  **exit** will destroy that pane.
   
-## Customized Tmux commands:
+## Customized Tmux key bindings:
  - **:vsp**/**:sp**  (take note of the **:** prefix) will create vertical/horizontal splits within vim if you are inside vim and in the window if you are outside vim
 
 -  **Ctrl-h**/**j**/**k**/**l**  will seamlessly move you between panes, and vim splits. You need not worry whether you are inside or outside of vim; behavior is consistent.
@@ -47,6 +47,41 @@ The default leader, C-b was left unchanged and all regular command should still 
  -  **:lss** lists all **s**ession
 
  -  **:win \<window name or :index\>** jumps to that named window or index. **Window name** could be partial for as long as it is unique; tmux will try to find a match. For example, if you have a window name (within that tmux session) called **programming**, you could type **:win prog** \<Enter\> and it should place you to that window.
+
+## Customized vim key bindings:
+ - <leader> is **;**
+  
+ - **<leader><leader>** will convert that line into a comment (bash, zsh or python style)
+  
+ - **<leader>ha** will print **################################################################################** ha stands for hash
+ 
+ - **<leader>dt** will insert date at current location
+  
+ - **<leader>'** will try to place the word under the cursor inside ''
+  
+ - **<leader>m** will remove the ^M characters from files coming from MSDOS.
+  
+ - **<space>** will unhighlight selection or matches
+  
+ - **^**, which is the start of line, is remapped to **B**
+ 
+ - **$**, which is the end of the line, is rempapped to **E**
+ 
+ - **C-w** will cycle through your buffers. Think of change windows where the files are on its individual windows
+ 
+ - **C-p** will run python against the current file.
+ 
+ - **C-i** will increase the column width of the pane
+ 
+ - **C-d** will decrease the column width of the pane
+ 
+ - **T** will place the current line to the top of the display
+ 
+ - **C-l** will place the next word inside the parentesis. will work only while on insert mode. For example, say you have this statement.
+      **if age**
+   then, you realized that you need to place **age** inside parentesis. So, you go to begining of **age**, insert **(** then type **C-l**. The result would be
+      **if (age)**
+    you will still be in the insert mode and the cursor is at the end of word **age**.
   
 
 
