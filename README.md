@@ -32,7 +32,6 @@ The default leader, C-b was left unchanged and all regular command should still 
   -  **exit** will destroy that pane.
   
 ## Customized Tmux key bindings:
- - **:vsp**/**:sp**  (take note of the **:** prefix) will create vertical/horizontal splits within vim if you are inside vim and in the window if you are outside vim
 
 -  **Ctrl-h**/**j**/**k**/**l**  will seamlessly move you between panes, and vim splits. You need not worry whether you are inside or outside of vim; behavior is consistent.
 
@@ -41,10 +40,22 @@ The default leader, C-b was left unchanged and all regular command should still 
  -  **Esc p** (or **Ctrl-\[ p**) will place you to the **p**revious window if there is one
 
  -  **Alt-p**/**n** will place you to the **p**revious/**n**ext window if there is one
+ 
+ ## The following aliases are in .zshrc but affects the tmux behavior. 
+ 
+ For consistency, all commands affecting tmux are preceded by **:** 
+ 
+ Attempts are made to make the command look like vim.
+ 
+ - **:vsp**/**:sp**  (take note of the **:** prefix) will create vertical/horizontal splits within vim if you are inside vim and in the window if you are outside vim
 
  -  **:lsw** lists all **w**indows in this current session
 
  -  **:lss** lists all **s**ession
+ 
+ -  **:q** kill pane where you are at
+ 
+ -  **:q!** kill window where you are at. It will ask for confirmation
 
  -  **:win \<window name or :index\>** jumps to that named window or index. **Window name** could be partial for as long as it is unique; tmux will try to find a match. For example, if you have a window name (within that tmux session) called **programming**, you could type **:win prog** \<Enter\> and it should place you to that window.
 
