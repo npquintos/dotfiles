@@ -1,6 +1,8 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" set keboard mapping delays
+set timeout timeoutlen=3000 ttimeoutlen=100
 " Sets how many lines of history VIM has to remember
 set history=700
 
@@ -187,9 +189,6 @@ autocmd BufWrite *.py :call DeleteTrailingWS()
 autocmd BufWrite *.coffee :call DeleteTrailingWS()
 
 
-map <leader>n :cn<cr>
-map <leader>p :cp<cr>
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Misc
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -201,12 +200,11 @@ set nocompatible
 map <leader>ha 80a#<ESC>a
 imap <leader>ha <ESC>80a#<ESC>a
 map <Leader>dt :r !date /t<CR>
-imap <C-e> <ESC><C-e>
 imap <leader>ha <ESC>80a#<ESC>a
 map <C-w> :bnext<CR>
 imap <C-w> <ESC><C-w>
 map <C-p> :!python %<CR>
-imap <C-p> <ESC><A-p>
+imap <C-p> <ESC><C-p>
 set undofile
 set colorcolumn=85
 vnoremap > >gv
@@ -214,12 +212,20 @@ vnoremap < <gv
 map <C-i> :vertical resize +5<cr>
 map <C-d> :vertical resize -5<cr>
 map T zt
-inoremap <C-l> <ESC>lldehhp
 noremap U ebgUe
 noremap / /\v
 vnoremap / /\v
-noremap <Leader>' ea'<ESC>bi'<ESC>
-noremap <Leader>xl <ESC>:!start "C:\Program Files\Microsoft Office\OFFICE11\excel.exe" M:\Data\PerformanceIncentive\workDone.xls<CR>
+imap <Leader>' <ESC>bi'<ESC>lldwhpa
+imap <Leader>" <ESC>bi"<ESC>lldwhpa
+imap <Leader>( <ESC>bi(<ESC>lldwhpa
+imap <Leader>) <ESC>bi(<ESC>lldwhpa
+imap <Leader>{ <ESC>bi{<ESC>lldwhpa
+imap <Leader>} <ESC>bi{<ESC>lldwhpa
+imap <Leader>[ <ESC>bi[<ESC>lldwhpa
+imap <Leader>] <ESC>bi[<ESC>lldwhpa
+imap <Leader>< <ESC>bi<<ESC>ea
+imap <Leader>> <ESC>bi<<ESC>ea
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
