@@ -49,19 +49,19 @@ The default leader, C-b was left unchanged and all regular command should still 
  -  **:win \<window name or :index\>** jumps to that named window or index. **Window name** could be partial for as long as it is unique; tmux will try to find a match. For example, if you have a window name (within that tmux session) called **programming**, you could type **:win prog** \<Enter\> and it should place you to that window.
 
 ## Customized vim key bindings:
- - <leader> is **;**
+ - /<leader/> is **;**
   
- - **<leader><leader>** will convert that line into a comment (bash, zsh or python style)
+ - **/<leader/>/<leader/>** will convert that line into a comment (bash, zsh or python style)
   
- - **<leader>ha** will print **################################################################################ ha** stands for **ha**sh
+ - **/<leader/>ha** will print **################################################################################ ha** stands for **ha**sh
  
- - **<leader>dt** will insert date at current location
+ - **/<leader/>dt** will insert date at current location
   
- - **<leader>'** will try to place the word under the cursor inside ''
+ - **/<leader/>'** will try to place the word under the cursor inside '  '
   
- - **<leader>m** will remove the ^M characters from files coming from MSDOS.
+ - **/<leader/>m** will remove the ^M characters from files coming from MSDOS.
   
- - **<space>** will unhighlight selection or matches
+ - **/<space/>** will unhighlight selection or matches
   
  - **^**, which is the start of line, is remapped to **B**
  
@@ -87,5 +87,8 @@ The default leader, C-b was left unchanged and all regular command should still 
       
     you will still be in the insert mode and the cursor is at the end of word **age**.
   
+  - **U** will change the word under the cursor to **U**ppercase
+  
+Previously highlighted lines via **V** will not un-highlight after doing a **>>** or **<<** so that you could continue indenting or un-indenting without having to highlight them again.
 
 
