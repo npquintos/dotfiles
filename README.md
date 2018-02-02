@@ -59,7 +59,7 @@ The default leader, C-b was left unchanged and all regular command should still 
   
  - **\<leader\>'** will try to place the word under the cursor inside '  '
   
- - **\<leader\>m** will remove the ^M characters from files coming from MSDOS.
+ - **\<leader\>m** will remove the **^M** characters from files coming from MSDOS.
   
  - **\<space\>** will unhighlight selection or matches
   
