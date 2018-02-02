@@ -53,7 +53,7 @@ The default leader, C-b was left unchanged and all regular command should still 
   
  - **<leader><leader>** will convert that line into a comment (bash, zsh or python style)
   
- - **<leader>ha** will print **################################################################################** ha stands for hash
+ - **<leader>ha** will print **################################################################################ ha** stands for **ha**sh
  
  - **<leader>dt** will insert date at current location
   
@@ -78,9 +78,13 @@ The default leader, C-b was left unchanged and all regular command should still 
  - **T** will place the current line to the top of the display
  
  - **C-l** will place the next word inside the parentesis. will work only while on insert mode. For example, say you have this statement.
+ 
       **if age**
+      
    then, you realized that you need to place **age** inside parentesis. So, you go to begining of **age**, insert **(** then type **C-l**. The result would be
+   
       **if (age)**
+      
     you will still be in the insert mode and the cursor is at the end of word **age**.
   
 
