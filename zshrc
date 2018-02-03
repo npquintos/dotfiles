@@ -140,6 +140,10 @@ alias :lss='tmux list-sessions'
 alias :lsw='tmux list-windows'
 alias :win='tmux select-window -t' 
 alias :ses='tmux switch -t '
+alias :q='tmux kill-pane'
+alias :qw='tmux confirm-before kill-window'
+alias :qs='tmux detach'
+alias :qt='tmux detach'
 
 # cd aliases
 alias /='cd /'
