@@ -62,6 +62,7 @@ The default leader, C-b was left unchanged and all regular command should still 
  -  **:qs** detach the session where you are at. This is the same as **:qt**
 
  -  **:win \<window name or :index\>** jumps to that named window or index. **Window name** could be partial for as long as it is unique; tmux will try to find a match. For example, if you have a window name (within that tmux session) called **programming**, you could type **:win prog** \<Enter\> and it should place you to that window.
+ -  **:vi** enters you to copy mode - alternative to the usual Ctrl-b \[ sequence
 
 ## Customized vim key bindings:
  - \<leader\> is **;**
