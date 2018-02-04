@@ -144,6 +144,7 @@ alias :q='tmux kill-pane'
 alias :qw='tmux confirm-before kill-window'
 alias :qs='tmux detach'
 alias :qt='tmux detach'
+alias :vi='tmux copy-mode'
 
 # cd aliases
 alias /='cd /'
