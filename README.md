@@ -57,7 +57,7 @@ The default leader, C-b was left unchanged and all regular command should still 
  
  -  **:qw** kill window where you are at. It will ask for confirmation
  
- -  **:qt** detach the session where you are at.
+ -  **:qt** detach the session where you are at (**q**uit **t**mux).
   
  -  **:qs** detach the session where you are at. This is the same as **:qt**
 
