@@ -72,7 +72,8 @@ The default leader, C-b was left unchanged and all regular command should still 
  - **\<leader\>\<leader\>** will convert that line into a comment (bash, zsh or python style)
   
  - **\<leader\>ha** will print **################################################################################ 
- ha** stands for **ha**sh
+ 
+    ha** stands for **ha**sh
  
  - **\<leader\>dt** will insert date at current location
   
