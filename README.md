@@ -71,9 +71,9 @@ The default leader, C-b was left unchanged and all regular command should still 
   
  - **\<leader\>\<leader\>** will convert that line into a comment (bash, zsh or python style)
   
- - **\<leader\>ha** will print **################################################################################ 
+ - **\<leader\>ha** will print **################################################################################** 
  
-    ha** stands for **ha**sh
+    **ha** stands for **ha**sh
  
  - **\<leader\>dt** will insert date at current location
   
@@ -87,15 +87,15 @@ The default leader, C-b was left unchanged and all regular command should still 
  
  - **$**, which is the end of the line, is rempapped to **E**
  
- - **C-w** will cycle through your buffers. Think of change windows where the files are on its individual windows
+ - **C-w** will cycle through your buffers. Think of **c**hange **w**indows where the files are on its individual windows
  
- - **C-p** will run python against the current file.
+ - **C-p** will run **p**ython against the current file.
  
- - **C-i** will increase the column width of the pane
+ - **C-i** will **i**ncrease the column width of the pane
  
- - **C-d** will decrease the column width of the pane
+ - **C-d** will **d**ecrease the column width of the pane
  
- - **T** will place the current line to the top of the display
+ - **T** will place the current line to the **T**op of the display
   
   - **U** will change the word under the cursor to **U**ppercase
   
