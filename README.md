@@ -53,7 +53,7 @@ The default leader, C-b was left unchanged and all regular command should still 
 
  -  **:lss** lists all **s**ession
  
- -  **:q** kill pane where you are at. Same command you use when quitting a pane in vim.
+ -  **:q** kill pane where you are at (**q**uit). similar to **exit** or **Ctrl-b x** Same command you use when quitting a pane in vim.
  
  -  **:qw** kill window where you are at (**q**uit **w**indow). It will ask for confirmation
  
