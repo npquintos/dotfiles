@@ -53,16 +53,18 @@ The default leader, C-b was left unchanged and all regular command should still 
 
  -  **:lss** lists all **s**ession
  
- -  **:q** kill pane where you are at
+ -  **:q** kill pane where you are at. Same command you use when quitting a pane in vim.
  
- -  **:qw** kill window where you are at. It will ask for confirmation
+ -  **:qw** kill window where you are at (**q**uit **w**indow). It will ask for confirmation
  
  -  **:qt** detach the session where you are at (**q**uit **t**mux).
   
- -  **:qs** detach the session where you are at. This is the same as **:qt**
+ -  **:qs** detach the session where you are at (**q**uit **s**ession). This is the same as **:qt**
 
  -  **:win \<window name or :index\>** jumps to that named window or index. **Window name** could be partial for as long as it is unique; tmux will try to find a match. For example, if you have a window name (within that tmux session) called **programming**, you could type **:win prog** \<Enter\> and it should place you to that window.
- -  **:vi** enters you to copy mode - alternative to the usual Ctrl-b \[ sequence
+ -  **:vi** enters you to copy mode while in tmux pane - alternative to the usual Ctrl-b \[ sequence
+ 
+ -  **Ctrl-b p** - **p**aste the string from the buffer after yanking that string while in tmux vi-copy mode.
 
 ## Customized vim key bindings:
  - \<leader\> is **;**
