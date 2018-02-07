@@ -20,15 +20,15 @@ Zsh: (place in ~/)
 I  set .zshrc so that you are automatically inside tmux when you open a new terminal and it attaches itself automatically from the last tmux session. The automatically created tmux session is \<username\>_session. If your username is **john**, the session name would be **john_session**. If such session already exists, it will re-attach to it. If that session does not exist, it will create a new one with that name.
 
 ## Regular Tmux key bindings:
-The default leader, C-b was replaced with C-; due to conflict of the former with vim key binding.
+The default leader, C-b was replaced with ` (backtick character) due to conflict of the former with vim key binding.
 
- -  **Ctrl-; c** will **c**reate a new window (and prompt you for a window name)
+ -  **`c** will **c**reate a new window (and prompt you for a window name)
  
- -  **Ctrl-; d** will **d**etach you from that window session (but saves that session so that you could go back in). Or, you could just close the window via **x** at the upper right window corner
+ -  **`d** will **d**etach you from that window session (but saves that session so that you could go back in). Or, you could just close the window via **x** at the upper right window corner
  
-  -  **Ctrl-; $** will change the **s**ession name
+  -  **`$** will change the **s**ession name
   
-  -  **Ctrl-; ,** will change the window name
+  -  **`,** will change the window name
   
   -  **exit** will destroy that pane.
   
@@ -67,7 +67,7 @@ The default leader, C-b was replaced with C-; due to conflict of the former with
  
  -  **:so** **so**urces or reload the .tmux.conf file
  
- -  **Ctrl-; p** - **p**aste the string from the buffer after yanking that string while in tmux vi-copy mode.
+ -  **`p** - **p**aste the string from the buffer after yanking that string while in tmux vi-copy mode.
 
 ## Customized vim key bindings:
  - \<leader\> is **;**
@@ -90,7 +90,7 @@ The default leader, C-b was replaced with C-; due to conflict of the former with
  
  - **$**, which is the end of the line, is rempapped to **E**
  
- - **C-w** will cycle through your buffers. Think of **c**hange **w**indows where the files are on its individual windows
+ - **\<leader\>n** will cycle through the **n**ext buffers (or files in the memory).
  
  - **C-p** will run **p**ython against the current file.
  
