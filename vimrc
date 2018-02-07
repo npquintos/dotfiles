@@ -201,8 +201,8 @@ map <leader>ha 80a#<ESC>a
 imap <leader>ha <ESC>80a#<ESC>a
 map <Leader>dt :r !date /t<CR>
 imap <leader>ha <ESC>80a#<ESC>a
-map <C-w> :bnext<CR>
-imap <C-w> <ESC><C-w>
+map <leader>n :bnext<CR>
+imap <leader>n <ESC><leader>n
 map <C-p> :!python %<CR>
 imap <C-p> <ESC><C-p>
 set undofile
