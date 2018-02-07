@@ -200,7 +200,6 @@ set nocompatible
 map <leader>ha 80a#<ESC>a
 imap <leader>ha <ESC>80a#<ESC>a
 map <Leader>dt :r !date /t<CR>
-imap <leader>ha <ESC>80a#<ESC>a
 map <leader>n :bnext<CR>
 imap <leader>n <ESC><leader>n
 map <C-p> :!python %<CR>
