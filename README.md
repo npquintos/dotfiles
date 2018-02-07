@@ -20,14 +20,15 @@ Zsh: (place in ~/)
 I  set .zshrc so that you are automatically inside tmux when you open a new terminal and it attaches itself automatically from the last tmux session. The automatically created tmux session is \<username\>_session. If your username is **john**, the session name would be **john_session**. If such session already exists, it will re-attach to it. If that session does not exist, it will create a new one with that name.
 
 ## Regular Tmux key bindings:
-The default leader, C-b was left unchanged and all regular command should still work:
- -  **Ctrl-b c** will **c**reate a new window (and prompt you for a window name)
+The default leader, C-b was replaced with C-; due to conflict of the former with vim key binding.
+
+ -  **Ctrl-; c** will **c**reate a new window (and prompt you for a window name)
  
- -  **Ctrl-b d** will **d**etach you from that window session (but saves that session so that you could go back in). Or, you could just close the window via **x** at the upper right window corner
+ -  **Ctrl-; d** will **d**etach you from that window session (but saves that session so that you could go back in). Or, you could just close the window via **x** at the upper right window corner
  
-  -  **Ctrl-b $** will change the **s**ession name
+  -  **Ctrl-; $** will change the **s**ession name
   
-  -  **Ctrl-b ,** will change the window name
+  -  **Ctrl-; ,** will change the window name
   
   -  **exit** will destroy that pane.
   
@@ -64,7 +65,9 @@ The default leader, C-b was left unchanged and all regular command should still 
  -  **:win \<window name or :index\>** jumps to that named window or index. **Window name** could be partial for as long as it is unique; tmux will try to find a match. For example, if you have a window name (within that tmux session) called **programming**, you could type **:win prog** \<Enter\> and it should place you to that window.
  -  **:vi** enters you to copy mode while in tmux pane - alternative to the usual Ctrl-b \[ sequence
  
- -  **Ctrl-b p** - **p**aste the string from the buffer after yanking that string while in tmux vi-copy mode.
+ -  **:so** **so**urces or reload the .tmux.conf file
+ 
+ -  **Ctrl-; p** - **p**aste the string from the buffer after yanking that string while in tmux vi-copy mode.
 
 ## Customized vim key bindings:
  - \<leader\> is **;**
