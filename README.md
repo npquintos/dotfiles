@@ -104,4 +104,8 @@ The default leader, C-b was replaced with ` (backtick character) due to conflict
   
 Previously highlighted lines via **V** will not un-highlight after doing a **>>** or **<<** so that you could continue indenting or un-indenting without having to highlight them again.
 
+If you want to edit another file, say, a python file, but you don't remember the exact name nor the exact directory location but you are sure it is on one of the directory from where you open vim, you could do:
+
+**:find \*.py\<TAB\>** , then tab through the list until you find the one you are looking for, then hit <ENTER>
+
 
