@@ -11,7 +11,12 @@ set history=700
 set path+=**
 
 " Display all matching files when we tab complete
+" To use, type :find *.txt<TAB>, then tab through
+" the selection until the desired file is reached,
+" then hit <ENTER>
 set wildmenu
+set wildmode=list:full
+set wildignorecase
 
 " Enable filetype plugins
 filetype plugin on
