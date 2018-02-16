@@ -4,7 +4,7 @@ select-word-style bash # ctrl+w on words
 
 
 precmd() {  # run before each prompt
-  gsta = " ($(git branch | grep '*' | cut -c3-))"
+  gsta = " ($(git branch | grep '*' | cut -c3-) >>$(git status -s | wc -l))"
 }
 
 ##
