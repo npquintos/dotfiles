@@ -2,15 +2,9 @@ autoload -U colors select-word-style
 colors          # colours
 select-word-style bash # ctrl+w on words
 
-##
-# Vcs info
-##
-autoload -Uz vcs_info
-zstyle ':vcs_info:*' enable git svn hg
-zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:*' formats "%{$fg[yellow]%}%c%{$fg[green]%}%u%{$reset_color%} [%{$fg[blue]%}%b%{$reset_color%}] %{$fg[yellow]%}%s%{$reset_color%}:%r"
+
 precmd() {  # run before each prompt
-  vcs_info
+  gsta = " ($(git branch | grep '*' | cut -c3-))"
 }
 
 ##
@@ -21,7 +15,7 @@ color="blue"
 if [ "$USER" = "root" ]; then
     color="red"         # root is red, user is blue
 fi;
-prompt='%{%K{blue}%}%{%F{white}%}%d%{$vcs_info%}%{$reset_color%}
+prompt='%{%K{blue}%}%{%F{white}%}%d%{$gsta%}%{$reset_color%}
 $ '
 RPROMPT='$FG[237]%n@%m%{$reset_color%}'
 
