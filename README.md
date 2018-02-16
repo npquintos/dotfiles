@@ -108,4 +108,11 @@ If you want to edit another file, say, a python file, but you don't remember the
 
 **:find \*.py\<TAB\>** , then tab through the list until you find the one you are looking for, then hit \<ENTER\>
 
+## zsh prompt
+
+Format of zsh prompt is:
+
+**/path/to/your/current/working/directory (git_branch_you_are_in >>no_of_uncommited_files)
+$                                                                                   username@hostname**
+
 
