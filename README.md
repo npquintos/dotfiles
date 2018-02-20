@@ -112,8 +112,10 @@ If you want to edit another file, say, a python file, but you don't remember the
 
 Format of zsh prompt is:
 
-**/path/to/your/current/working/directory (git_branch_you_are_in \u25cf no_of_uncommited_untracked_deleted_added_files)**
+**/path/to/your/current/working/directory (git_branch_you_are_in no_of_uncommited_untracked_deleted_added_files)**
 
 **\$ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;username@hostname**
+
+If you are not in a git repository, the branch name would not show up. If you are in a git repository, the current branch name would show up, together with the total number of untracked, modified, added, and deleted files, **if any**. This is to remind you before changing branch that there are uncommited files which could be lost.
 
 
