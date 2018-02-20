@@ -2,9 +2,15 @@ autoload -U colors select-word-style
 colors          # colours
 select-word-style bash # ctrl+w on words
 
-
 precmd() {  # run before each prompt
-  gsta = " ($(git branch | grep '*' | cut -c3-) >>$(git status -s | wc -l))"
+  my_portion=""
+  if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
+      uncommitted=$(git status -s | wc -l)
+      if [ "$uncommitted" != "0" ]; then
+          my_portion=" ● "${uncommitted}
+      fi
+      my_portion=" ($(git branch | grep '*' | cut -c3-)"${my_portion}\) 
+  fi
 }
 
 ##
@@ -15,8 +21,8 @@ color="blue"
 if [ "$USER" = "root" ]; then
     color="red"         # root is red, user is blue
 fi;
-prompt='%{%K{blue}%}%{%F{white}%}%d%{$gsta%}%{$reset_color%}
-$ '
+prompt='%{%K{blue}%}%{%F{white}%}%d%{$my_portion%}%{$reset_color%}
+⊳ '
 RPROMPT='$FG[237]%n@%m%{$reset_color%}'
 
 bindkey -v                      # vi keybinding
@@ -173,6 +179,14 @@ alias -s log="tail -f"
 # Custom Functions
 function qfind() {
     /usr/bin/find -name "*$@*" -print 2>/dev/null
+}
+
+function rttree() {
+    while true; do
+        clear
+        tree $1
+        sleep 1
+    done
 }
 
 # use tmux as default shell
