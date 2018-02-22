@@ -45,7 +45,7 @@ setopt list_ambiguous           # complete as much of a completion until it gets
 
 zstyle ':completion::complete:*' use-cache on               # completion caching, use rehash to clear
 zstyle ':completion:*' cache-path ~/.zsh/cache              # cache path
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'   # ignore case
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'   # ignore case and partial completion
 zstyle ':completion:*' menu select=2                        # menu if nb items > 2
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}       # colorz !
 zstyle ':completion:*::::' completer _expand _complete _ignored _approximate # list of completers to use
