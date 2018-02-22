@@ -119,6 +119,7 @@ Format of zsh prompt is:
 
 For example,
 /home/joe/projectA (master ● 3)
+
 ⊳  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;joe@prod1**
 
 If you are not in a git repository, the branch name would not show up. If you are in a git repository, the current branch name would show up in white font, together with the total number of untracked, modified, added, and deleted files, **if any**. You will see a large dot, followed by number of affected files in red font so that you don't miss it. Once you do a commit, this large dot, together with the number, will be gone and only the branch name remains. This is to remind you before changing branch that there are uncommited files which could be lost.
