@@ -4,12 +4,15 @@ select-word-style bash # ctrl+w on words
 
 precmd() {  # run before each prompt
   my_portion=""
+  my_branch=""
+  my_close=""
   if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
+      my_branch=" ($(git branch | grep '*' | cut -c3-)"
       uncommitted=$(git status -s | wc -l)
       if [ "$uncommitted" != "0" ]; then
           my_portion=" ● "${uncommitted}
       fi
-      my_portion=" ($(git branch | grep '*' | cut -c3-)"${my_portion}\) 
+      my_close=")"
   fi
 }
 
@@ -21,7 +24,7 @@ color="blue"
 if [ "$USER" = "root" ]; then
     color="red"         # root is red, user is blue
 fi;
-prompt='%{%K{blue}%}%{%F{white}%}%d%{$my_portion%}%{$reset_color%}
+prompt='%{%K{blue}%}%{%F{white}%}%d%{$my_branch%}%{%F{red}%}%{$my_portion%}%{%F{white}%}%{$my_close%}%{$reset_color%}
 ⊳ '
 RPROMPT='$FG[237]%n@%m%{$reset_color%}'
 
