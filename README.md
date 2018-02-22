@@ -117,12 +117,16 @@ Format of zsh prompt is:
 
 **⊳  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;username@hostname**
 
+
+If you are not in a git repository, the branch name would not show up. If you are in a git repository, the current branch name would show up in white font, together with the total number of untracked, modified, added, and deleted files, **if any**. You will see a large dot, followed by number of affected files in red font so that you don't miss it. Once you do a commit, this large dot, together with the number, will be gone and only the branch name remains. This is to remind you before changing branch that there are uncommited files which could be lost.
+
+
 For example,
 
 /home/joe/projectA (master ● 3)
 
 ⊳  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;joe@prod1
 
-If you are not in a git repository, the branch name would not show up. If you are in a git repository, the current branch name would show up in white font, together with the total number of untracked, modified, added, and deleted files, **if any**. You will see a large dot, followed by number of affected files in red font so that you don't miss it. Once you do a commit, this large dot, together with the number, will be gone and only the branch name remains. This is to remind you before changing branch that there are uncommited files which could be lost.
+In the above example, you are currently in /home/joe/projectA directory, it has a git repository, and you are at the "master" branch, with 3 pending commits. These pending commits could be a combination of modified tracked files, new untracked files, or deleted files, which could either be just in the working directory (i.e., unstaged) or, in the staging area.
 
 
