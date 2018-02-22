@@ -112,7 +112,8 @@ If you want to edit another file, say, a python file, but you don't remember the
 
 Format of zsh prompt is:
 
-**/path/to/your/current/working/directory (git_branch_you_are_in no_of_uncommited_untracked_deleted_added_files)**
+**/path/to/your/current/working/directory (git_branch_you_are_in  ●  no_of_uncommited_untracked_deleted_added_files)**
+
 
 **\$ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;username@hostname**
 
