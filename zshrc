@@ -125,7 +125,9 @@ unset LD_PRELOAD				# Meh.
 export EDITOR=vim				# Meh.
 
 # Command Aliases
-unalias ls
+if (( ${+aliases[ls]} )); then
+    unalias ls
+fi
 alias ll='ls -lt | more -30'
 alias lh='ls -ld .??*'
 alias lt='tree -d | more'
