@@ -219,7 +219,8 @@ vnoremap < <gv
 map <C-i> :vertical resize +5<cr>
 map <C-d> :vertical resize -5<cr>
 map T zt
-noremap U ebgUe
+" set to uppercase the word under the cursor
+noremap U viwgU
 noremap / /\v
 vnoremap / /\v
 imap <Leader>' <ESC>bi'<ESC>lldwhpa
