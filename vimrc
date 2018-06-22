@@ -6,6 +6,12 @@ set timeout timeoutlen=3000 ttimeoutlen=100
 " Sets how many lines of history VIM has to remember
 set history=700
 
+" If your main.cpp file is in project/src and include
+" files in project/include, and  you want to
+" automatically create header files while working on
+" main.cpp, and quickly open that header file via gf
+set path=.,../src,../include
+
 " Search down into subfolders
 " Provides tab-completion for all file-related tasks
 set path+=**
