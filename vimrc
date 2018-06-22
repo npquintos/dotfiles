@@ -233,7 +233,8 @@ noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 " if you type <leader>h while at normal mode and cursor at test.h,
 " it will automatically create file ../include/test.h, which is
 " similar to template.h except that _xxx. is replaced with  with _test_h_
-map <silent> <leader>h :let mycurf=expand("<cfile>")<cr> :execute("!sed 's/xxx/ ".mycurf."/;s/\\./_/g' ../include/template.h > ../include/".mycurf)<cr>
+" then, vertically split the window and open the header file a the other pane
+map <silent> <leader>h :let mycurf=expand("<cfile>")<cr> :execute("!sed 's/xxx/ ".mycurf."/;s/\\./_/g' ../include/template.h > ../include/".mycurf)<cr> :vsp mycurf
 set nocompatible
 map <leader>ha 80a#<ESC>a
 imap <leader>ha <ESC>80a#<ESC>a
