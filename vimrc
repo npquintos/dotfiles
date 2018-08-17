@@ -212,16 +212,17 @@ noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 "noel's customizations
 "
 " Create ../include/template.h that has the standard header format like below.
-"
+" Or, copy template.h that is included in this dot files.
 " #ifndef _xxx.
 " #define _xxx.
 " namespace qbliss {
 " // place code below
+" class xxx {
+"     private:
+"
+"     public:
 " 
-" 
-" 
-" 
-" 
+" }
 " 
 " } // end of namespace qbliss
 " #endif // _xxx.
@@ -235,7 +236,7 @@ noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 " similar to template.h except that _xxx. is replaced with  with _test_h_
 " then, vertically split the window and open the header file a the other pane
 set splitright
-map <silent> <leader>h :let mycurf=expand("<cfile>")<cr> :execute("!sed 's/xxx/".mycurf."/;s/\\./_/g' ../include/template.h   > ../include/".mycurf)<cr><cr> :execute("vsp ../include/".mycurf)<cr> <C-h>
+map <silent> <leader>h :call CreateHeader()<cr><cr>
 set nocompatible
 map <leader>ha 80a#<ESC>a
 imap <leader>ha <ESC>80a#<ESC>a
@@ -290,3 +291,12 @@ function! MyComment()
   endif
   call setline('.', line)
 endfunction
+
+" Will create header files for header name under the cursor                          
+function! CreateHeader()                                                             
+    let mycurf=expand("<cfile>")                                                     
+    execute("!sed 's/xxx/".mycurf."/;s/\\./_/g' ../include/template.h   > ../include/".mycurf)
+    execute("vsp ../include/".mycurf)                                                
+    normal! <C-h>                                                                    
+endfunction            
+
