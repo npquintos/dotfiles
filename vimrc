@@ -291,12 +291,12 @@ function! MyComment()
   endif
   call setline('.', line)
 endfunction
-
+        
 " Will create header files for header name under the cursor                          
 function! CreateHeader()                                                             
     let mycurf=expand("<cfile>")                                                     
-    execute("!sed 's/xxx/".mycurf."/;s/\\./_/g' ../include/template.h   > ../include/".mycurf)
+    let nycurf = substitute(mycurf, ".h", "", "")                                    
+    execute("!sed 's/xxx/".nycurf."/;s/\\./_/g' ../include/template.h   > ../include/".mycurf)
     execute("vsp ../include/".mycurf)                                                
     normal! <C-h>                                                                    
-endfunction            
-
+endfunction    
