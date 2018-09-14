@@ -210,33 +210,14 @@ autocmd BufWrite *.coffee :call DeleteTrailingWS()
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 "noel's customizations
-"
-" Create ../include/template.h that has the standard header format like below.
-" Or, copy template.h that is included in this dot files.
-" #ifndef _xxx.
-" #define _xxx.
-" namespace qbliss {
-" // place code below
-" class xxx {
-"     private:
-"
-"     public:
-" 
-" }
-" 
-" } // end of namespace qbliss
-" #endif // _xxx.
-" 
-"
-" If you are editing
-" ../src/main.cpp and you have something like
-" #include "test.h"
-" if you type <leader>h while at normal mode and cursor at test.h,
-" it will automatically create file ../include/test.h, which is
-" similar to template.h except that _xxx. is replaced with  with _test_h_
-" then, vertically split the window and open the header file a the other pane
 set splitright
+
+"For these to work, place cpp_helper.vim inside .vim/plugin
+"This plugin is in cpp_plugin repository under my name
 map <silent> <leader>h :call CreateHeader()<cr><cr>
+map <silent> <leader>d :call CreateCode()<cr><cr>
+map <silent> <leader>c :call ExtractClass()<cr>
+
 set nocompatible
 map <leader>ha 80a#<ESC>a
 imap <leader>ha <ESC>80a#<ESC>a
