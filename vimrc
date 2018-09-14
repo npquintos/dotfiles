@@ -213,7 +213,7 @@ noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 set splitright
 
 "For these to work, place cpp_helper.vim inside .vim/plugin
-"This plugin is in cpp_plugin repository under my name
+"This plugin is in cpp_helper repository under npquintos
 map <silent> <leader>h :call CreateHeader()<cr><cr>
 map <silent> <leader>d :call CreateCode()<cr><cr>
 map <silent> <leader>c :call ExtractClass()<cr>
