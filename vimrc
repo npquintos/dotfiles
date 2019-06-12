@@ -178,12 +178,6 @@ map B ^
 " Remap E to the end of the line
 map E $
 
-" Move a line of text using ALT+[jk] or Comamnd+[jk] on mac
-nmap <M-j> mz:m+<cr>`z
-nmap <M-k> mz:m-2<cr>`z
-vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
-vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
-
 " Tmux integration
 let g:tmux_navigator_no_mappings = 1
 
@@ -234,32 +228,32 @@ map <C-i> :vertical resize +5<cr>
 map <C-d> :vertical resize -5<cr>
 map T zt
 " set to uppercase the word under the cursor
-noremap U viwgU
+noremap <leader>U gUiw
 noremap / /\v
 vnoremap / /\v
-imap <Leader>' <ESC>bi'<ESC>lldwhpa
-imap <Leader>" <ESC>bi"<ESC>lldwhpa
-imap <Leader>( <ESC>bi(<ESC>lldwhpa
-imap <Leader>) <ESC>bi(<ESC>lldwhpa
-imap <Leader>{ <ESC>bi{<ESC>lldwhpa
-imap <Leader>} <ESC>bi{<ESC>lldwhpa
-imap <Leader>[ <ESC>bi[<ESC>lldwhpa
-imap <Leader>] <ESC>bi[<ESC>lldwhpa
-imap <Leader>< <ESC>bi<<ESC>ea
-imap <Leader>> <ESC>bi<<ESC>ea
+imap <Leader>' diwa'<ESC>p
+imap <Leader>" diwa"<ESC>p
+imap <Leader>( diwa(<ESC>p
+imap <Leader>{ diwa{<ESC>p
+imap <Leader>[ diwa[<ESC>p
+map <Leader>p :PlugInstall<cr>
+
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin('~/.vim/plugged')
+Plug 'jiangmiao/auto-pairs'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'tpope/vim-fugitive'
+Plug 'vimwiki/vimwiki'
+call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
-" Returns true if paste mode is enabled
-function! HasPaste()
-    if &paste
-        return 'PASTE MODE  '
-    en
-    return ''
-endfunction
 
 " Python and bash comment toggle
 function! MyComment()
