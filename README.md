@@ -1,5 +1,5 @@
 # dotfiles
-These are my configuration files for zsh, vim, and tmux. Simply rename them with a dot '.' in front and save them in your home directory.They are integrated together to form a unified tool. My aims are as follows:
+These are my configuration files for zsh, vim, and tmux. Simply rename them with a dot '.' in front instead of the double underscore "__" and save them in your home directory.They are integrated together to form a unified tool. My aims are as follows:
 - less plugins as possible to enhance speed
 - less memorization of keystrokes by using the same keystrokes while inside vim or at tmux.
 - Frequently used keys must be keys that are easy to type
