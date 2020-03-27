@@ -220,6 +220,11 @@ map <leader>ha 80a#<ESC>a
 imap <leader>ha <ESC>80a#<ESC>a
 map <Leader>dt :r !date /t<CR>
 map <leader>n :bnext<CR>
+map <leader>x :bdel<CR>
+"Zoom in or maximize current pane
+map <leader>z :tabedit %<CR>
+"Do an expose in vim
+map <leader>e :sball<CR>
 imap <leader>n <ESC><leader>n
 map <C-p> :!python %<CR>
 imap <C-p> <ESC><C-p>
