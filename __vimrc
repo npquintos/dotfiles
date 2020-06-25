@@ -245,6 +245,7 @@ imap <Leader>( diwa(<ESC>p
 imap <Leader>{ diwa{<ESC>p
 imap <Leader>[ diwa[<ESC>p
 map <Leader>p :PlugInstall<cr>
+command W w !sudo tee "%" > /dev/null
 
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
