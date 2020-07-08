@@ -12,3 +12,4 @@ for i in $(ls ${mysource}/__*); do
     j=${i##*/}
     ln -s $i ${myhome}/${j/__/\.}
 done
+ln -s ${mysource}/init.vim ${myhome}/.config/nvim/.
