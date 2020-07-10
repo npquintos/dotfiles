@@ -7,7 +7,7 @@ set timeout timeoutlen=3000 ttimeoutlen=100
 set history=700
 
 set guifont=Lucida_Console:h14:cANSI:qDRAFT
-colorscheme slate
+colorscheme flattened_light
 
 " If your main.cpp file is in project/src and include
 " files in project/include, and  you want to
@@ -169,8 +169,9 @@ set viminfo^=%
 " Always show the status line
 set laststatus=2
 
-" Format the status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
+" Format the status line: <path> |<filename>   Line:<line no.>
+" This is to make filename visible for vertical splits
+set statusline=%.40(%r%{getcwd()}%h%)%=%(\|%t%r%)\ \ \ %(Line:\ %l%)
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
