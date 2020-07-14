@@ -139,6 +139,7 @@ alias viml='vim *(om[1])'
 alias vimp='vim *.py(om[1])'
 alias popl='populate *.DAT(om[1])'
 alias mkdirq='h() {mkdir -p $1 && cd $_ };h'
+alias rtree='watch tree'
 # aliases for tmux
 alias :vsp='tmux split-window -h'
 alias :sp='tmux split-window -v'
@@ -187,13 +188,6 @@ function qfind() {
     /usr/bin/find -name "*$@*" -print 2>/dev/null
 }
 
-function rttree() {
-    while true; do
-        clear
-        tree $1
-        sleep 1
-    done
-}
 
 # use tmux as default shell
 if command -v tmux > /dev/null; then
