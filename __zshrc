@@ -187,7 +187,7 @@ alias mmv='noglob zmv -W'
 alias -s log="tail -f"
 
 # source z plugin
-. ./z.sh
+# . ./z.sh
 
 # Custom Functions
 function qfind() {
