@@ -264,6 +264,12 @@ imap <Leader>[ diwa[<ESC>p
 map <Leader>p :PlugInstall<cr>
 command W w !sudo tee "%" > /dev/null
 
+" while on the left split, jump to the same line number at the right split window
+nmap <leader>> :let linenum=getpos('.')[1]\|:wincmd l\|:call cursor(linenum,0)<cr>
+
+" while on the right split, jump to the same line number at the left split window
+nmap <leader><lt> :let linenum=getpos('.')[1]\|:wincmd h\|:call cursor(linenum,0)<cr>
+
 " Enable line highlighting for the active pane to
 " make it easy to identify where you are when several
 " panes are present
