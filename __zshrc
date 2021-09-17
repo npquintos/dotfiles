@@ -159,6 +159,7 @@ alias :qs='tmux detach'
 alias :qt='tmux detach'
 alias :vi='tmux copy-mode'
 alias :so='tmux source-file ~/.tmux.conf'
+alias ;w='tmux new-window'
 
 # cd aliases
 alias /='cd /'
