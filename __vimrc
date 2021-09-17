@@ -193,7 +193,7 @@ nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
 " Go to the next tmux window
 nnoremap <C-n> :TmuxNextWindow<cr>
 " Allow jumping to next tmux window while at "insert" mode in vim
-inoremap <Space><Space>n <esc>:TmuxNextWindow<cr>
+
 
 " Delete trailing white space on save, useful for Python and CoffeeScript ;)
 func! DeleteTrailingWS()
