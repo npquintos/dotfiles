@@ -123,6 +123,10 @@ set expandtab
 " Be smart when using tabs ;)
 set smarttab
 
+" Make tabs visible via >~~~~~
+set list
+set listchars=tab:>~
+
 " 1 tab == 4 spaces
 set shiftwidth=4
 set tabstop=4
