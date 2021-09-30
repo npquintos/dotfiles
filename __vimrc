@@ -267,8 +267,6 @@ nnoremap <M-n> :bp<cr>
 inoremap <M-n> <esc>:bp<cr>
 
 map T zt
-" Do not search files for a match when hitting Ctrl-n
-setglobal complete-=i
 
 " set to uppercase the word under the cursor
 noremap <leader>U gUiw
@@ -309,6 +307,16 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-fugitive'
 Plug 'vimwiki/vimwiki'
 call plug#end()
+
+" Do not search unnecessarily for a match when hitting Ctrl-n
+" because it takes TOO LONG!
+setglobal complete-=i
+setglobal complete-=t
+setglobal complete-=u
+setlocal complete-=i
+setlocal complete-=t
+setlocal complete-=u
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
