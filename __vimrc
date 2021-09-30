@@ -197,7 +197,7 @@ nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
 " Go to the next tmux window
 nnoremap <C-n> :TmuxNextWindow<cr>
 " Allow jumping to next tmux window while at "insert" mode in vim
-
+inoremap <C-n> <ESC>:TmuxNextWindow<cr>
 
 " Delete trailing white space on save, useful for Python and CoffeeScript ;)
 func! DeleteTrailingWS()
@@ -258,6 +258,15 @@ execute "set <M-j>=\ej"
 nnoremap <M-j> <C-w>5+
 execute "set <M-k>=\ek"
 nnoremap <M-k> <C-w>5-
+
+" go to previous buffer via Alt-n
+" IMPORTANT: you have to modify auto-pairs.vim in your plugin
+" and comment out the portion:
+" if !exists('g:AutoPairsShortcutJump')
+"    let g:AutoPairsShortcutJump = '<M-n>'
+execute "set <M-n>=\en"
+nnoremap <M-n> :bp<cr>
+inoremap <M-n> <esc>:bp<cr>
 
 map T zt
 " set to uppercase the word under the cursor
