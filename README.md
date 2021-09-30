@@ -9,9 +9,12 @@ The following plugins are necessary for these configuration files to work proper
 Vim: (place in ~/.vim/plugin)
   - [auto-pairs.vim](https://github.com/jiangmiao/auto-pairs) - you need to edit this file and comment-out the portion:
   
-    if !exists('g:AutoPairsShortcutJump')
-       let g:AutoPairsShortcutJump = '<M-n>'
-    endif
+      if !exists('g:AutoPairsShortcutJump')
+         let g:AutoPairsShortcutJump = '<M-n>'
+      endif
+  
+      You also need to comment-out all portions of the code that contains the variable g:AutoPairsShortcutJump
+  
   - [tmux_navigator.vim](https://github.com/christoomey/vim-tmux-navigator) --> edit this to include "command! TmuxNextWindow call s:TmuxCommand('next-window')"
           This would allow you to go the next tmux window while inside vim session using same keystroke as when in terminal (Ctrl-n). For vim, this works only while in Normal mode. Ctrl-N, while in Insert mode works as usual.
   - [fugitive.vim](https://github.com/tpope/vim-fugitive) --> needs git installation. This plugin is optional
