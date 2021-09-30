@@ -267,6 +267,9 @@ nnoremap <M-n> :bp<cr>
 inoremap <M-n> <esc>:bp<cr>
 
 map T zt
+" Do not search files for a match when hitting Ctrl-n
+setglobal complete-=i
+
 " set to uppercase the word under the cursor
 noremap <leader>U gUiw
 noremap / /\v
