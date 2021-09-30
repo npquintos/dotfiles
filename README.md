@@ -8,6 +8,7 @@ The following plugins are necessary for these configuration files to work proper
 
 Vim: (place in ~/.vim/plugin)
   - [auto-pairs.vim](https://github.com/jiangmiao/auto-pairs) - you need to edit this file and comment-out the portion:
+  
     if !exists('g:AutoPairsShortcutJump')
        let g:AutoPairsShortcutJump = '<M-n>'
     endif
