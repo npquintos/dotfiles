@@ -3,6 +3,7 @@
     vim.opt.linebreak = true
     vim.opt.breakindent = true
     vim.opt.wrap = true
+    vim.opt.scrolloff = 0
     
    -- then, at nvim/core/mappings.lua, insert after maps.n["Q"] = "<Nop>"
      maps.n["T"] = { "zt", desc = "move line to top" }
