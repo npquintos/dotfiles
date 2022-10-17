@@ -1,0 +1,10 @@
+  -- at nvim/init.lua, before the last line, insert this so that long
+  -- lines would wrap around
+    vim.opt.linebreak = true
+    vim.opt.breakindent = true
+    vim.opt.wrap = true
+    
+   -- then, at nvim/core/mappings.lua, insert after maps.n["Q"] = "<Nop>"
+     maps.n["T"] = { "zt", desc = "move line to top" }
+     maps.n["j"] = { "gj", desc = "move down to adjacent line" }
+     maps.n["k"] = { "gk", desc = "move up to adjacent line" }
