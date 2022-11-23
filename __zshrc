@@ -124,6 +124,10 @@ export GCC_COLORS=1				# Colorz in gcc!
 unset LD_PRELOAD				# Meh.
 export EDITOR=vim				# Meh.
 
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  exec tmux
+fi
+
 # Command Aliases
 if (( ${+aliases[ls]} )); then
     unalias ls
