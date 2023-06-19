@@ -206,6 +206,7 @@ local config = {
       { "ggandor/leap.nvim" },
       require('leap').add_default_mappings(),
       { "ribru17/bamboo.nvim" },
+      require('bamboo').load(),
       { "stevearc/oil.nvim" },
       require('oil').setup(),
       -- { "andweeb/presence.nvim" },
