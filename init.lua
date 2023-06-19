@@ -199,17 +199,32 @@ local config = {
       -- You can disable default plugins as follows:
       -- ["goolord/alpha-nvim"] = { disable = true },
       ["nvim-neo-tree/neo-tree.nvim"] = { disable = true },
-
+    },
       -- You can also add new plugins here as well:
       -- Add plugins, the packer syntax without the "use"
-      { "tpope/repeat.vim" },
-      { "ggandor/leap.nvim" },
-      require('leap').add_default_mappings(),
-      { "ribru17/bamboo.nvim" },
-      require('bamboo').load(),
-      { "stevearc/oil.nvim" },
-      require('oil').setup(),
-      -- { "andweeb/presence.nvim" },
+      { "ggandor/leap.nvim" , 
+         keys = {
+             { "s", "<Plug>(leap-forward-to)", mode = { "n", "x", "o" }, desc = "Leap forward to" },
+             { "S", "<Plug>(leap-backward-to)", mode = { "n", "x", "o" }, desc = "Leap backward to" },
+             { "x", "<Plug>(leap-forward-till)", mode = { "x", "o" }, desc = "Leap forward till" },
+             { "X", "<Plug>(leap-backward-till)", mode = { "x", "o" }, desc = "Leap backward till" },
+             { "gs", "<Plug>(leap-from-window)", mode = { "n", "x", "o" }, desc = "Leap from window" },
+         },
+         opts = {},
+         dependencies = {
+            "tpope/vim-repeat",
+         },
+      },
+      { "ribru17/bamboo.nvim",
+        event = "User AstroFile",
+      },
+      { "stevearc/oil.nvim", 
+              enabled = true,
+              cmd = "Oil",
+              keys = {
+                { "<leader>O", function() require("oil").open() end, desc = "Open folder in Oil" },
+              }, 
+      },
       -- {
       --   "ray-x/lsp_signature.nvim",
       --   event = "BufRead",
@@ -266,7 +281,6 @@ local config = {
     packer = { -- overrides `require("packer").setup(...)`
       compile_path = vim.fn.stdpath "data" .. "/packer_compiled.lua",
     },
-  },
 
   -- LuaSnip Options
   luasnip = {
