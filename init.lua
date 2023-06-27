@@ -52,6 +52,7 @@ local config = {
       scrolloff = 0,
       shiftwidth = 4,
       expandtab = true,
+      hlsearch = true,
       tabstop = 4,
     },
     -- g = {
@@ -186,6 +187,8 @@ local config = {
       ["T"] = { "zt", desc = "move current line to top" },
       ["E"] = { "$", desc = "move cursor to end of line" },
       ["B"] = { "^", desc = "move cursor to beginning of line" },
+      -- [">"] = { ">gv", desc = "retain selection after indentation" },
+      -- ["<"] = { "<gv", desc = "retain selection after un-indentation" },
       ["<A-h>"] = { ":bprev<cr>", desc = "go to previous buffer" },
       ["<A-l>"] = { ":bnext<cr>", desc = "go to next buffer" },
       -- ["j"] = { "gj", desc = "move down to adjacent line" },
@@ -208,28 +211,11 @@ local config = {
     },
       -- You can also add new plugins here as well:
       -- Add plugins, the packer syntax without the "use"
-      { "ggandor/leap.nvim" , 
-         keys = {
-             { "s", "<Plug>(leap-forward-to)", mode = { "n", "x", "o" }, desc = "Leap forward to" },
-             { "S", "<Plug>(leap-backward-to)", mode = { "n", "x", "o" }, desc = "Leap backward to" },
-             { "x", "<Plug>(leap-forward-till)", mode = { "x", "o" }, desc = "Leap forward till" },
-             { "X", "<Plug>(leap-backward-till)", mode = { "x", "o" }, desc = "Leap backward till" },
-             { "gs", "<Plug>(leap-from-window)", mode = { "n", "x", "o" }, desc = "Leap from window" },
-         },
-         opts = {},
-         dependencies = {
-            "tpope/vim-repeat",
-         },
-      },
+      "AstroNvim/astrocommunity",
+      { import = "astrocommunity.motion.leap-nvim" }, 
+      { import = "astrocommunity.file-explorer.oil-nvim" }, 
       { "ribru17/bamboo.nvim",
         event = "User AstroFile",
-      },
-      { "stevearc/oil.nvim", 
-              enabled = true,
-              cmd = "Oil",
-              keys = {
-                { "<leader>O", function() require("oil").open() end, desc = "Open folder in Oil" },
-              }, 
       },
       -- {
       --   "ray-x/lsp_signature.nvim",
