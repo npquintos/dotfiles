@@ -183,10 +183,11 @@ local config = {
       ["<leader>fW"] = { ":Telescope live_grep search_dirs=.<cr>", desc = "live grep the current directory" },
       ["<right>"] = { ":let linenum=getpos('.')[1]|:wincmd l|:call cursor(linenum,0)<cr>", desc = "go to same line number at right pane" },
       ["<left>"] = { ":let linenum=getpos('.')[1]|:wincmd h|:call cursor(linenum,0)<cr>", desc = "go to same line number at left pane" },
-      ["P"] = { "%", desc = "jump to opening/closing pair" },
+      ["o"] = { "%", desc = "jump to opening/closing pair" },
       ["T"] = { "zt", desc = "move current line to top" },
       ["E"] = { "$", desc = "move cursor to end of line" },
       ["B"] = { "^", desc = "move cursor to beginning of line" },
+      ["P"] = { "]pcf=def<esc>A:<cr>", desc = "convert to function def" },
       -- [">"] = { ">gv", desc = "retain selection after indentation" },
       -- ["<"] = { "<gv", desc = "retain selection after un-indentation" },
       ["<A-h>"] = { ":bprev<cr>", desc = "go to previous buffer" },
@@ -207,6 +208,7 @@ local config = {
     init = {
       -- You can disable default plugins as follows:
       -- ["goolord/alpha-nvim"] = { disable = true },
+      -- ["nvim-neo-tree/neo-tree.nvim"] = { disable = true },
       ["nvim-neo-tree/neo-tree.nvim"] = { disable = true },
     },
       -- You can also add new plugins here as well:
