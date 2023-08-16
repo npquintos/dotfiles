@@ -27,7 +27,8 @@ set $rofi_cmd rofi \
 # TODO: add window with the next release of rofi-wayland
 set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 
-# set capslock as windows button
+# set capslock as windows button other choices may be found at
+# /usr/share/X11/xkb/symbols/capslock
 input * {
     xkb_options caps:super
 }
