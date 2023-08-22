@@ -136,10 +136,10 @@ input * {
     # bindsym $mod+9 workspace number 9
     # bindsym $mod+0 workspace number 10
     # Move focused container to workspace
-    bindsym $mod+Left move container to workspace L
-    bindsym $mod+Right move container to workspace R
-    bindsym $mod+Up move container to workspace U
-    bindsym $mod+Down move container to workspace D
+    bindsym $mod+Mod1+$left move container to workspace L
+    bindsym $mod+Mod1+$right move container to workspace R
+    bindsym $mod+Mod1+$up move container to workspace U
+    bindsym $mod+Mod1+$down move container to workspace D
     # bindsym $mod+Shift+5 move container to workspace number 5
     # bindsym $mod+Shift+6 move container to workspace number 6
     # bindsym $mod+Shift+7 move container to workspace number 7
@@ -150,6 +150,22 @@ input * {
     # We just use 1-10 as the default.
 #
 # Layout stuff:
+#	GREAT IDEA:
+#		I personally find 'stacking' layout useless.
+#	
+#		Tabbed is good because it allows you to 
+#		quickly go from one window to another and see
+#		exactly where you are going, and at the same
+# 		time, see full screen. Split window is ok too
+#		because it allows you to see all your open
+#		apps like in 'expose' mode, and navigate
+#		easily from one window to another. Once there,
+#		you want to go full screen and when you want
+#		to select another window, you go back to split.
+#		Hence, you want a quick toggle between split
+# 		and full screen. caps_lock+a is ideal for that
+#		because they are adjacent to each other and
+#		easy to press.
 #
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
@@ -160,10 +176,11 @@ input * {
     # Switch the current container between different layout styles
     # bindsym $mod+s layout stacking
     bindsym $mod+t layout tabbed
-    bindsym $mod+e layout toggle split
+    bindsym $mod+s layout toggle split
 
     # Make the current focus fullscreen
-    bindsym $mod+z fullscreen toggle
+    # 'a' is near to capslock, making it easier to type
+    bindsym $mod+a fullscreen toggle
 
     # Toggle the current focus between tiling and floating mode
     # bindsym $mod+f floating toggle
