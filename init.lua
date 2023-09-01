@@ -183,13 +183,17 @@ local config = {
       ["<leader>fW"] = { ":Telescope live_grep search_dirs=.<cr>", desc = "live grep the current directory" },
       ["<right>"] = { ":let linenum=getpos('.')[1]|:wincmd l|:call cursor(linenum,0)<cr>", desc = "go to same line number at right pane" },
       ["<left>"] = { ":let linenum=getpos('.')[1]|:wincmd h|:call cursor(linenum,0)<cr>", desc = "go to same line number at left pane" },
+      ["<up>"] = { ":let linenum=getpos('.')[1]|:wincmd k|:call cursor(linenum,0)<cr>", desc = "go to same line number at upper pane" },
+      ["<down>"] = { ":let linenum=getpos('.')[1]|:wincmd j|:call cursor(linenum,0)<cr>", desc = "go to same line number at lower pane" },
       ["o"] = { "%", desc = "jump to opening/closing pair" },
       ["T"] = { "zt", desc = "move current line to top" },
       ["E"] = { "$", desc = "move cursor to end of line" },
       ["B"] = { "^", desc = "move cursor to beginning of line" },
       ["P"] = { "]pcf=def<esc>A:<cr>", desc = "convert to function def" },
-      -- [">"] = { ">gv", desc = "retain selection after indentation" },
-      -- ["<"] = { "<gv", desc = "retain selection after un-indentation" },
+      [">"] = { ">gv", desc = "retain selection after indentation" },
+      ["<"] = { "<gv", desc = "retain selection after un-indentation" },
+      ["gf"] = { "?def <cr>w", desc = "go to start of function" },
+      ["gb"] = { "?def <cr>w*", desc = "go to calling function" },
       ["<A-h>"] = { ":bprev<cr>", desc = "go to previous buffer" },
       ["<A-l>"] = { ":bnext<cr>", desc = "go to next buffer" },
       -- ["j"] = { "gj", desc = "move down to adjacent line" },
@@ -210,15 +214,37 @@ local config = {
       -- ["goolord/alpha-nvim"] = { disable = true },
       -- ["nvim-neo-tree/neo-tree.nvim"] = { disable = true },
       ["nvim-neo-tree/neo-tree.nvim"] = { disable = true },
+      ["nvim-focus/focus.nvim"] = { disable = true },
     },
       -- You can also add new plugins here as well:
       -- Add plugins, the packer syntax without the "use"
       "AstroNvim/astrocommunity",
       { import = "astrocommunity.motion.leap-nvim" }, 
       { import = "astrocommunity.file-explorer.oil-nvim" }, 
+      -- { import = "astrocommunity.comment.mini-comment" }, 
       { "ribru17/bamboo.nvim",
         event = "User AstroFile",
       },
+      -- { "nvim-focus/focus.nvim",
+      --   event = "BufRead",
+      --   config = function()
+      --       require("focus").setup({
+      --           enable = True,
+      --           autoresize = {
+      --               enable = true,
+      --               width = 90
+      --           },
+      --           ui = {
+      --               cursorline = true,
+      --               number = true,
+      --               hybridnumber = true,
+      --               cursorcolumn = true,
+      --               signcolumn = true,
+      --               winhighlight = false,
+      --           },
+      --       })
+      --   end,
+      -- },
       -- {
       --   "ray-x/lsp_signature.nvim",
       --   event = "BufRead",
