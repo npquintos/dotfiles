@@ -27,11 +27,13 @@ set $rofi_cmd rofi \
 # TODO: add window with the next release of rofi-wayland
 set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 
+# start dmenu (a program launcher)
+bindsym $mod+m exec --no-startup-id dmenu_run
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # Requires: desktop-backgrounds-compat, swaybg
-output * bg /usr/share/backgrounds/default.png fill
+output * bg /usr/share/backgrounds/jj_light_by_Hiking93.jpg fill
 #
 # Example configuration:
 #
@@ -125,10 +127,10 @@ input * {
 # Workspaces:
 #
     # Switch to workspace
-    bindsym $mod+Shift+$left workspace L
-    bindsym $mod+Shift+$right workspace R
-    bindsym $mod+Shift+$up workspace U
-    bindsym $mod+Shift+$down workspace D
+    bindsym $mod+Shift+$left workspace 1
+    bindsym $mod+Shift+$right workspace 5
+    bindsym $mod+Shift+$up workspace 3
+    bindsym $mod+Shift+$down workspace 4
     # bindsym $mod+5 workspace number 5
     # bindsym $mod+6 workspace number 6
     # bindsym $mod+7 workspace number 7
@@ -136,10 +138,10 @@ input * {
     # bindsym $mod+9 workspace number 9
     # bindsym $mod+0 workspace number 10
     # Move focused container to workspace
-    bindsym $mod+Mod1+$left move container to workspace L
-    bindsym $mod+Mod1+$right move container to workspace R
-    bindsym $mod+Mod1+$up move container to workspace U
-    bindsym $mod+Mod1+$down move container to workspace D
+    bindsym $mod+Left move container to workspace 1
+    bindsym $mod+Right move container to workspace 5
+    bindsym $mod+Up move container to workspace 3
+    bindsym $mod+Down move container to workspace 4
     # bindsym $mod+Shift+5 move container to workspace number 5
     # bindsym $mod+Shift+6 move container to workspace number 6
     # bindsym $mod+Shift+7 move container to workspace number 7
