@@ -225,6 +225,9 @@ local config = {
       { "ribru17/bamboo.nvim",
         event = "User AstroFile",
       },
+      { "echasnovski/mini.nvim/lua/mini/tabline.lua",
+        event = "User AstroFile",
+      },
       -- { "nvim-focus/focus.nvim",
       --   event = "BufRead",
       --   config = function()
