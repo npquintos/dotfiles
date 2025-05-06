@@ -267,6 +267,7 @@ nnoremap <M-n> :bp<cr>
 inoremap <M-n> <esc>:bp<cr>
 
 map T zt
+map o %
 
 " set to uppercase the word under the cursor
 noremap <leader>U gUiw
