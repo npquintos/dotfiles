@@ -7,7 +7,7 @@ set timeout timeoutlen=3000 ttimeoutlen=100
 set history=700
 
 set guifont=Lucida_Console:h14:cANSI:qDRAFT
-colorscheme flattened_darkq
+colorscheme desert
 
 " If your main.cpp file is in project/src and include
 " files in project/include, and  you want to
